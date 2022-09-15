@@ -114,12 +114,29 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      algolia: {
-        appId: '7PVD9E8IDU',
-        apiKey: '06acac4493164e897ffec8f4635312a5',
-        indexName: 'knowledge',
+      // algolia: {
+      //   appId: '7PVD9E8IDU',
+      //   apiKey: '06acac4493164e897ffec8f4635312a5',
+      //   indexName: 'knowledge',
+      // },
+      docs: {
+        sidebar: {
+          hideable: true
+        }
       }
     }),
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        indexBlog: false,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
